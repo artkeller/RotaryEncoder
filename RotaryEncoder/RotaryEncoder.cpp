@@ -20,8 +20,8 @@
 *	  rotaryEncoder.updateClearButton();			// enable Button to clear recent encoder position if pushed, set to 0
 *
 *	  if (rotaryEncoder.hasChanged()) {			// verify if encoder position has changed
-*			volatile byte encoderPos = rotaryEncoder.encodedPos() % 16;   // update counter for the dial (values 0..15)
-*			do_something_with(encoderPos);
+*		volatile byte encoderPos = rotaryEncoder.encodedPos() % 16;   // update counter for the dial (values 0..15)
+*		do_something_with(encoderPos);
 *	  }
 *		...
 *	}
@@ -146,8 +146,7 @@ void RotaryEncoder::setRange(byte min, byte max){
 * @method		startDebouncer
 * @parameter		---
 * @returns		---
-*
-* @globalvar		rotating			w
+* @globalvar		rotating	w
 */
 void RotaryEncoder::startDebouncer() {
 	rotating = true;		// start the debouncer
@@ -157,7 +156,7 @@ void RotaryEncoder::startDebouncer() {
 * @method		encodedPos
 * @parameter		---
 * @returns		encoded position (minEncoderPos..maxEncodedPos)
-* @globalvar		encoderPos		r
+* @globalvar		encoderPos	r
 * @descriptionn Calculate encoded position between minEncoderPos and maxEncodedPos
 */
 byte RotaryEncoder::encodedPos() {
@@ -170,7 +169,7 @@ byte RotaryEncoder::encodedPos() {
 * @returns		true  if position changed
 * @returns		false if position stayed
 * @globalvar		lastReportedPos	rw
-* @globalvar		encoderPos		r
+* @globalvar		encoderPos	r
 */
 bool RotaryEncoder::hasChanged() {
 
@@ -186,10 +185,8 @@ bool RotaryEncoder::hasChanged() {
 * @method		updateClearButton
 * @parameter		---
 * @returns		---
-*
 * @globalvar		minEncoderPos	r
-* @globalvar		encoderPos		w
-*
+* @globalvar		encoderPos	w
 * @description	reset encoder to min position if button has been pushed
 */
 void RotaryEncoder::updateClearButton(){
@@ -211,7 +208,6 @@ bool RotaryEncoder::hasButtonPushed(){
 * @parameter		---
 * @returns		true  if button pushed
 * @returns		false if button unpushed
-*
 * @description	Simple input polling of Button
 */
 bool RotaryEncoder::doPushButton(){
