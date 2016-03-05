@@ -137,7 +137,7 @@ RotaryEncoder::RotaryEncoder(byte CLK, byte DAT, byte SW) {
 */
 void RotaryEncoder::setRange(byte min, byte max){
 	if ( min < max ) {
-		encoderPos		= minEncoderPos   = min;
+		encoderPos	= minEncoderPos   = min;
 		lastReportedPos = maxEncoderPos   = max;
 	}
 }
