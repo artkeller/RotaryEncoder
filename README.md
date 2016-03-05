@@ -1,3 +1,2 @@
 # RotaryEncoder
-Rotary Encoder debounced
-MCU: ARDUINO Family
+Rotary Encoder debounced - MCU: ARDUINO Family
