@@ -42,7 +42,7 @@
 #endif // ARDUINO
 
 
-#if defined(__AVR__) 
+#ifdef __AVR__
 #ifdef __cplusplus
 
 class RotaryEncoder
@@ -68,7 +68,7 @@ class RotaryEncoder
 };
 
 #endif // __cplusplus
-#else  // other boards or MCUs
+#else  // other MCUs
 #warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
-#endif // __AVR__ and ...
+#endif // __AVR__
 #endif // RotaryEncoder_h
