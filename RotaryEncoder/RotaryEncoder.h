@@ -41,13 +41,14 @@
 #include "WProgram.h"
 #endif // ARDUINO
 
-// Arduino Uno, Nano, Duemilanove, Diecimila, LilyPad, Mini, Fio, etc...
-#if defined(__AVR__) and (defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega8__))
+
+#if defined(__AVR__) 
 #ifdef __cplusplus
 
 class RotaryEncoder
 {
 	public:
+	// Arduino Uno, Nano, Duemilanove, Diecimila, LilyPad, Mini, Fio, etc...
 	#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega8__)
 	// Constructor
 	RotaryEncoder(byte CLK = 3, byte DAT = 2, byte SW = A1); 
