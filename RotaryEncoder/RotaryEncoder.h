@@ -1,12 +1,12 @@
 /*
-* @title			Arduino Rotary Encoder Library
-* @file			RotaryEncoder.h
-* @version		Version 0.1 A3
-* @author		Thomas Walloschke
-* @contact		mailto:artkeller@gmx.de
+* @title	Arduino Rotary Encoder Library
+* @file		RotaryEncoder.h
+* @version	Version 0.1 A3
+* @author	Thomas Walloschke
+* @contact	mailto:artkeller@gmx.de
 *
 * @description	Rotary Encoder Library for measuring quadrature encoded signals
-* @copyright		Copyright (c) 2015 Thomas Walloschke. All rigths reserved.
+* @copyright	Copyright (c) 2015 Thomas Walloschke. All rigths reserved.
 * @licence
 *	Permission is hereby granted, free of charge, to any person obtaining a copy
 *	of this software and associated documentation files (the "Software"), to deal
