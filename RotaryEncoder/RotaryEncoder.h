@@ -1,7 +1,7 @@
 /*
 * @title	Arduino Rotary Encoder Library
 * @file		RotaryEncoder.h
-* @version	Version 0.1 A3
+* @version	Version 0.1 A4
 * @author	Thomas Walloschke
 * @contact	mailto:artkeller@gmx.de
 *
@@ -27,7 +27,8 @@
 *	THE SOFTWARE.
 *
 * @history
-*	0.1 A3 - 2015-12-25	- Thomas Walloschke : Documentaion Update
+*	0.1 A4 - 2016-03-05	- Thomas Walloschke : MCU Documentation Update
+*	0.1 A3 - 2015-12-25	- Thomas Walloschke : Documentation Update
 *	0.1 A2 - 2015-12-25	- Thomas Walloschke : Class Update
 *	0.1 A1 - 2015-12-23	- Thomas Walloschke : Initial Release for AVR
 */
