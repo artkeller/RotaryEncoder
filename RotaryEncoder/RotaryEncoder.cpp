@@ -281,6 +281,7 @@ void _doEncoderB() {
 
 /*
 * @changelog
+*   2016-03-05 - Thomas Walloschke : Documentation Update
 *   2015-12-26 - Thomas Walloschke : Documentation
 *   2015-12-25 - Thomas Walloschke : Class extention
 *   2015-12-23 - Thomas Walloschke : Initial Class implementation
