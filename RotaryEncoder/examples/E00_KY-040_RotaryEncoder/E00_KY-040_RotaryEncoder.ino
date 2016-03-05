@@ -1,6 +1,6 @@
 //  Getting Started: E00 KY-040 RotaryEncoder Demo
 //
-//  Search string: 
+//  Web Search String: 
 //    "ky-040 rotary decoder encoder module for arduino"
 //
 //  Functions:
