@@ -1,7 +1,7 @@
 /*
 * @title	Arduino Rotary Encoder Library
 * @file		RotaryEncoder.cpp
-* @version	Version 0.1 A3
+* @version	Version 0.1 A4
 * @author	Thomas Walloschke
 * @contact	mailto:artkeller@gmx.de
 *
