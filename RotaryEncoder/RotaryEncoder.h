@@ -56,14 +56,14 @@ class RotaryEncoder
 	#endif	// ARV architecture
 	
 	void setRange(byte min, byte max);			// Set min and max encoder position range
-	void startDebouncer();						// Start debouncer - mandatory call inside 'loop()' to enable rotary debouncer
-	byte encodedPos();							// Recent position 0..255
-	bool hasChanged();						    // Position has been changed
-	void updateClearButton();					// Use Button to clear recent encoder position if pushed, set to 0
-	bool hasButtonPushed();						// Check Button if it has been pushed, transparent for caller
+	void startDebouncer();					// Start debouncer - mandatory call inside 'loop()' to enable rotary debouncer
+	byte encodedPos();					// Recent position 0..255
+	bool hasChanged();					// Position has been changed
+	void updateClearButton();				// Use Button to clear recent encoder position if pushed, set to 0
+	bool hasButtonPushed();					// Check Button if it has been pushed, transparent for caller
 
 	private:
-	bool doPushButton();							// Check button state
+	bool doPushButton();					// Check button state
 };
 
 #endif // __cplusplus
