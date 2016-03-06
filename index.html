@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>RotaryEncoder by artkeller</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>RotaryEncoder</h1>
+        <p>Rotary Encoder debounced</p>
+        <p class="view"><a href="https://github.com/artkeller/RotaryEncoder">View the Project on GitHub <small>artkeller/RotaryEncoder</small></a></p>
+        <ul>
+          <li><a href="https://github.com/artkeller/RotaryEncoder/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/artkeller/RotaryEncoder/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/artkeller/RotaryEncoder">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="rotaryencoder" class="anchor" href="#rotaryencoder" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RotaryEncoder</h1>
+
+<p>Rotary Encoder Library for measuring quadrature encoded signals</p>
+
+<p>Rotary Encoder debounced - MCU: ARDUINO Family</p>
+
+<h2>
+<a id="synopsis" class="anchor" href="#synopsis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synopsis</h2>
+
+<pre><code>#include "RotaryEncoder.h"
+
+// -- Default initializing of Rotary Encoder
+//    CLK = pin 3, DAT = pin 2, SW = pin A1, CW = count up, CCW = count down
+//    One instance only is allowed due to plain ISR usage with global data
+RotaryEncoder rotaryEncoder = RotaryEncoder();  
+
+// -- Aternative initialization
+//    Individual initializing of Rotary Encoder
+//    CLK = pin 2, DAT = pin 3, SW = pin 4, CW = count down, CCW = count up`
+RotaryEncoder rotaryEncoder = RotaryEncoder(2,3,4);     
+
+// -- Apply Rotary Encoder methods
+void loop() {  
+  ...
+  // -- Has to be inside loop() to enable rotary debouncer
+  rotaryEncoder.startDebouncer();
+  // -- Enable Button to clear recent encoder position if pushed, set to 0
+  rotaryEncoder.updateClearButton(); 
+
+  // -- Verify if encoder position has changed
+  if (rotaryEncoder.hasChanged()) { 
+  // -- Update counter for the dial (values 0..15)
+    volatile byte encoderPos = rotaryEncoder.encodedPos() % 16; 
+    do_something_with(encoderPos);
+  }
+  ...
+}
+</code></pre>
+
+<h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h2>
+
+<p>Rotary Encoder Library for measuring quadrature encoded signals</p>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>For KY-040 Rotary Encoder Module</p>
+
+<p>Web Search String:
+"ky-040 rotary decoder encoder module for arduino"</p>
+
+<ul>
+<li>E00 KY-040 Rotary Encoder Demo w/o "RotaryEncoder.h" - examples/E00_KY-040_RotaryEncoder/E00_KY-040_RotaryEncoder.ino</li>
+<li>E01 KY-040 Rotary Encoder Demo w/ "RotaryEncoder.h" - examples/E01_KY-040_RotaryEncoder/E01_KY-040_RotaryEncoder.ino</li>
+</ul>
+
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Disclaimer</h2>
+
+<p>The library is tested with some ARV Arduino only. It may possibly work with other MCUs.</p>
+
+<h2>
+<a id="acklowledgement" class="anchor" href="#acklowledgement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acklowledgement</h2>
+
+<p>This code was inspired by</p>
+
+<ol>
+<li><p>"Another Interrupt Library THAT REALLY WORKS" by rafbuff
+<a href="http://playground.arduino.cc/Main/RotaryEncoders">http://playground.arduino.cc/Main/RotaryEncoders</a></p></li>
+<li><p>"Encoder Library, for measuring quadrature encoded signals" by Paul Stoffregen
+<a href="http://www.pjrc.com/teensy/td_libs_Encoder.html">http://www.pjrc.com/teensy/td_libs_Encoder.html</a></p></li>
+</ol>
+
+<p>Thanks to all.</p>
+
+<h2>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>Copyright (c) 2015 Thomas Walloschke. All rigths reserved.</p>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/artkeller">artkeller</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
