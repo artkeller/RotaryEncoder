@@ -40,7 +40,7 @@
 #include "Arduino.h"
 #else  // not ARDUINO
 #include "WProgram.h"
-#endif // ARDUINO
+#endif // end ARDUINO
 
 
 #ifdef __AVR__
@@ -53,9 +53,9 @@ class RotaryEncoder
 	#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega8__)
 	// Constructor
 	RotaryEncoder(byte CLK = 3, byte DAT = 2, byte SW = A1); 
-	#else	// other boards or MCUs
+	#else	 // other boards or MCUs
 	#warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
-	#endif	// ARV architecture
+	#endif	 // end ARV architecture
 	
 	void setRange(byte min, byte max);			// Set min and max encoder position range
 	void startDebouncer();					// Start debouncer - mandatory call inside 'loop()' to enable rotary debouncer
@@ -68,8 +68,8 @@ class RotaryEncoder
 	bool doPushButton();					// Check button state
 };
 
-#endif // __cplusplus
-#else  // other MCUs
+#endif   // end __cplusplus
+#else    // other MCUs
 #warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
-#endif // __AVR__
-#endif // RotaryEncoder_h
+#endif   // end __AVR__
+#endif   // end RotaryEncoder_h
