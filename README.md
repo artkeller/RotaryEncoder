@@ -1,6 +1,6 @@
-# RotaryEncoder - debounced
+# Rotary Encoder (debounced)
 
-Rotary Encoder Library for measuring quadrature encoded signals
+Rotary Encoder Arduino Library for measuring quadrature encoded signals
 
 ### MCU
 
