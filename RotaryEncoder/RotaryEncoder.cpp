@@ -73,7 +73,7 @@
 #include "Arduino.h"
 #else  // not ARDUINO
 #include "WProgram.h"
-#endif // ARDUINO
+#endif // end ARDUINO
 
 #include "RotaryEncoder.h"
 
