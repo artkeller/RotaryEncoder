@@ -1,7 +1,11 @@
-# RotaryEncoder
+# RotaryEncoder - debounced
 
 Rotary Encoder Library for measuring quadrature encoded signals
 
-Rotary Encoder debounced - MCU: ARDUINO Family
+### MCU
+
+ARDUINO Family
+
+### More
 
 http://artkeller.github.io/RotaryEncoder
