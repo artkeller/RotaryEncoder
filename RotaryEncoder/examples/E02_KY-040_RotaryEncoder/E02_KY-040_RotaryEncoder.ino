@@ -78,7 +78,7 @@ void loop() {                                                   // apply Rotary 
 
   // Print changes
   if (rotaryEncoder.hasChanged()) {                             // verify if encoder position has changed
-    volatile byte encoderPos = rotaryEncoder.encodedPos();      // update counter for the dial (values 0..15)
+    volatile byte encoderPos = rotaryEncoder.encodedPos();      // update counter for the dial (values 1..12)
     Serial.print(F("Position: "));
     Serial.println(encoderPos, DEC);
   }
