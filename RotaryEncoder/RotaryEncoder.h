@@ -38,9 +38,9 @@
 
 #if ARDUINO >= 100
 #include "Arduino.h"
-#else  // not ARDUINO
+#else  /* !ARDUINO */
 #include "WProgram.h"
-#endif // end ARDUINO
+#endif /* end !ARDUINO */
 
 
 #ifdef __AVR__
@@ -68,8 +68,8 @@ class RotaryEncoder
 	bool doPushButton();					// Check button state
 };
 
-#endif   // end __cplusplus
-#else    // other MCUs
+#endif   /* end !__cplusplusO */
+#else    /* other MCUs */
 #warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
-#endif   // end __AVR__
-#endif   // end RotaryEncoder_h
+#endif   /* end !__AVR__ */
+#endif   /* end !RotaryEncoder_h */ 
