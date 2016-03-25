@@ -27,6 +27,7 @@
 *	THE SOFTWARE.
 *
 * @history
+*	0.1 A5 - 2016-03-25	- Thomas Walloschke : Edit some typos
 *	0.1 A4 - 2016-03-05	- Thomas Walloschke : MCU Documentation Update
 *	0.1 A3 - 2015-12-25	- Thomas Walloschke : Documentation Update
 *	0.1 A2 - 2015-12-25	- Thomas Walloschke : Class Update
@@ -42,7 +43,6 @@
 #include "WProgram.h"
 #endif /* end !ARDUINO */
 
-
 #ifdef __AVR__
 #ifdef __cplusplus
 
@@ -53,9 +53,9 @@ class RotaryEncoder
 	#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega8__)
 	// Constructor
 	RotaryEncoder(byte CLK = 3, byte DAT = 2, byte SW = A1); 
-	#else	 // other boards or MCUs
+	#else    /* other boards or MCUs */ 
 	#warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
-	#endif	 // end ARV architecture
+	#endif	 /* end !ARV architectureO */
 	
 	void setRange(byte min, byte max);			// Set min and max encoder position range
 	void startDebouncer();					// Start debouncer - mandatory call inside 'loop()' to enable rotary debouncer
