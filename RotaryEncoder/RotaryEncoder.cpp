@@ -1,7 +1,7 @@
 /*
 * @title	Arduino Rotary Encoder Library
 * @file		RotaryEncoder.cpp
-* @version	Version 0.1 A4
+* @version	Version 0.1 A5
 * @author	Thomas Walloschke
 * @contact	mailto:artkeller@gmx.de
 *
@@ -71,9 +71,9 @@
 
 #if ARDUINO >= 100
 #include "Arduino.h"
-#else  // not ARDUINO
+#else  /* !ARDUINO */
 #include "WProgram.h"
-#endif /* !ARDUINO */
+#endif /* end !ARDUINO */
 
 #include "RotaryEncoder.h"
 
@@ -281,6 +281,7 @@ void _doEncoderB() {
 
 /*
 * @changelog
+*   2016-03-25 - Thomas Walloschke : Edit typos
 *   2016-03-05 - Thomas Walloschke : Documentation Update
 *   2015-12-26 - Thomas Walloschke : Documentation
 *   2015-12-25 - Thomas Walloschke : Class extention
