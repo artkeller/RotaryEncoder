@@ -1,7 +1,7 @@
 /*
 * @title	Arduino Rotary Encoder Library
 * @file		RotaryEncoder.h
-* @version	Version 0.1 A4
+* @version	Version 0.1 A5
 * @author	Thomas Walloschke
 * @contact	mailto:artkeller@gmx.de
 *
@@ -55,7 +55,7 @@ class RotaryEncoder
 	RotaryEncoder(byte CLK = 3, byte DAT = 2, byte SW = A1); 
 	#else    /* other boards or MCUs */ 
 	#warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
-	#endif	 /* end !ARV architectureO */
+	#endif	 /* end other boards or MCUs  */
 	
 	void setRange(byte min, byte max);			// Set min and max encoder position range
 	void startDebouncer();					// Start debouncer - mandatory call inside 'loop()' to enable rotary debouncer
@@ -69,7 +69,7 @@ class RotaryEncoder
 };
 
 #endif   /* end !__cplusplusO */
-#else    /* other MCUs */
+#else    /* !__AVR__ */
 #warning "This version does not support those architecture - please adopt, test and respond result to me - Thank you!"
 #endif   /* end !__AVR__ */
 #endif   /* end !RotaryEncoder_h */ 
