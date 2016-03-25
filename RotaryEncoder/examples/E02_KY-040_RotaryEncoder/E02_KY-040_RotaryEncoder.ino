@@ -47,9 +47,9 @@
 
 #if ARDUINO >= 100
 #include "Arduino.h"
-#else
+#else  /* !ARDUINO */
 #include "WProgram.h"
-#endif
+#endif /* end !ARDUINO */
 
 #include <RotaryEncoder.h>
 #include <Time.h>  
