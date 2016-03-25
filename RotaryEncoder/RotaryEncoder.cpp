@@ -73,7 +73,7 @@
 #include "Arduino.h"
 #else  // not ARDUINO
 #include "WProgram.h"
-#endif // end ARDUINO
+#endif /* !ARDUINO */
 
 #include "RotaryEncoder.h"
 
@@ -286,4 +286,3 @@ void _doEncoderB() {
 *   2015-12-25 - Thomas Walloschke : Class extention
 *   2015-12-23 - Thomas Walloschke : Initial Class implementation
 */
-
