@@ -45,9 +45,9 @@
 
 #if ARDUINO >= 100
 #include "Arduino.h"
-#else
+#else  /* !ARDUINO */
 #include "WProgram.h"
-#endif
+#endif /* end !ARDUINO */
 
 // This implementation based on  
 // "Another Interrupt Library THAT REALLY WORKS" by rafbuff
