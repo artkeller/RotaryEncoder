@@ -6,9 +6,9 @@
 //  Functions:
 //    Rotate CW:   count up         1..59, 1  or 1..31, 1  or 1..12, 1  or 0..99, 0
 //    Rotate CCW:  count down       59..1, 59 or 32..1, 31 or 12..1, 12 or 99..0, 99
-//    Push Button 
-//      - short:   switch to next digit group;  HH or MM or SS or YY or MM or DD
-//      - long:    ready                        20YY-MM-DDTHH:MM:SS
+//    Push Button (not implemented yet)
+//     (- short:   switch to next digit group;  HH or MM or SS or YY or MM or DD    )
+//     (- long:    ready                        20YY-MM-DDTHH:MM:SS                 )
 //
 //
 //  Wiring:
@@ -21,7 +21,8 @@
 //    |             |--- GND  >   o GND
 //    +-------------+
 //
-//     No external RC- or R-parts are used. Debouncing will be supported by Rotary Encoder library 'RotaryEncoder.h'
+//     No external RC- or R-parts are used. Debouncing will be supported by 
+//     Rotary Encoder library 'RotaryEncoder.h'
 //
 //  Copyright (c) 2015 Thomas Walloschke (artkeller at gmx.de). All rights reserved.
 //
