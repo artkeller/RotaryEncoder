@@ -19,10 +19,11 @@
 //    |             |--- GND  >   o GND
 //    +-------------+
 //
-//     No external RC- or R-parts are used. Debouncing will be supported by Rotary 
-//     Encoder Interrupt Handler 'RotaryEncoder.ino'
+//     No external RC- or R-parts are used. Debouncing will be supported by  
+//     Interrupt Handler 'InterruptServiceRoutines.ino'
 //
 //  Copyright (c) 2015 Thomas Walloschke (artkeller at gmx.de). All rights reserved.
+//  Updated 20191006 by artkeller (doc only)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
