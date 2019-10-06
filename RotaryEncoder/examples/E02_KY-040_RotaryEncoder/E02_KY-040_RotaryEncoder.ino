@@ -25,6 +25,7 @@
 //     Rotary Encoder library 'RotaryEncoder.h'
 //
 //  Copyright (c) 2015 Thomas Walloschke (artkeller at gmx.de). All rights reserved.
+//  Updated 20191006 by artkeller (doc only)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
