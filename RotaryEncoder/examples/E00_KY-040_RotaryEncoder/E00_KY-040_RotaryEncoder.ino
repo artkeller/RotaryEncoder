@@ -19,7 +19,8 @@
 //    |             |--- GND  >   o GND
 //    +-------------+
 //
-//     No external RC- or R-parts are used. Debouncing will be supported by Rotary Encoder library 'RotaryEncoder.h'
+//     No external RC- or R-parts are used. Debouncing will be supported by Rotary 
+//     Encoder Interrupt Handler 'RotaryEncoder.ino'
 //
 //  Copyright (c) 2015 Thomas Walloschke (artkeller at gmx.de). All rights reserved.
 //
