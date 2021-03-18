@@ -167,7 +167,7 @@ byte RotaryEncoder::encodedPos() {
 
 // -1 left -1 right 0 none
 int RotaryEncoder::direction() {
-	return hasChanged() ? dir : 0;
+	return rotating ? 0 : dir;
 }
 
 /*
