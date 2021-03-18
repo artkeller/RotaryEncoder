@@ -90,6 +90,8 @@ volatile byte maxEncoderPos   	= 255;
 volatile byte encoderPos      	= minEncoderPos;  // a counter for the dial
 volatile byte lastReportedPos 	= maxEncoderPos;  // Change management, seeded
 volatile bool rotating 		= false;	  // debounce management
+volatile int dir   	= 0;		
+
 
 // Prototypes of Interrupt service routines
 void _doEncoderA();
@@ -161,6 +163,11 @@ void RotaryEncoder::startDebouncer() {
 */
 byte RotaryEncoder::encodedPos() {
 	return encoderPos;
+}
+
+// -1 left -1 right 0 none
+int RotaryEncoder::direction() {
+	return dir;
 }
 
 /*
@@ -242,7 +249,10 @@ void _doEncoderA() {
 		A_set = !A_set;
 
 		// Adjust counter + if A leads B
-		if ( A_set && !B_set ) encoderPos = (encoderPos >= maxEncoderPos) ? minEncoderPos : ++encoderPos;
+		if ( A_set && !B_set ) {
+			encoderPos = (encoderPos >= maxEncoderPos) ? minEncoderPos : ++encoderPos;
+			dir = 1;	
+		}
 
 		rotating = false;  // no more debouncing until resetDebouncer() hits again
 	}
@@ -273,7 +283,10 @@ void _doEncoderB() {
 		B_set = !B_set;
 		
 		//  Adjust counter - 1 if B leads A
-		if ( B_set && !A_set ) encoderPos = (encoderPos <= minEncoderPos) ? maxEncoderPos : --encoderPos;
+		if ( B_set && !A_set ) {
+			encoderPos = (encoderPos <= minEncoderPos) ? maxEncoderPos : --encoderPos;
+			dir = -1;	
+		}
 
 		rotating = false;  // no more debouncing until resetDebouncer() hits again
 	}

@@ -81,6 +81,14 @@ void loop() {                                                   // apply Rotary 
   // Print changes
   if (rotaryEncoder.hasChanged()) {                             // verify if encoder position has changed
     volatile byte encoderPos = rotaryEncoder.encodedPos();      // update counter for the dial (values 1..12)
+    int dir = rotaryEncoder.direction();
+
+    if(dir != 0)
+    {
+      Serial.print(F("Rotated :"));
+      Serial.println(dir > 0 ? "Right" : "Left");
+    }
+
     Serial.print(F("Position: "));
     Serial.println(encoderPos, DEC);
   }
