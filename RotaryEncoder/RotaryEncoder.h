@@ -63,6 +63,7 @@ class RotaryEncoder
 	bool hasChanged();					// Position has been changed
 	void updateClearButton();				// Use Button to clear recent encoder position if pushed, set to 0
 	bool hasButtonPushed();					// Check Button if it has been pushed, transparent for caller
+	int direction();
 
 	private:
 	bool doPushButton();					// Check button state
